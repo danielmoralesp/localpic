@@ -25,3 +25,5 @@ gem 'ohm'
 gem 'ohm-contrib'
 
 gem "rgeo-proj4"
+
+gem "figaro"
