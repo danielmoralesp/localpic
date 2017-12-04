@@ -1,5 +1,4 @@
 class ImageFilter < ServiceWorker
-  include ImageOperations
 
   sidekiq_options queue: :low
 
@@ -20,6 +19,12 @@ class ImageFilter < ServiceWorker
 
   private
     def process_filter
+      MiniMagick::Tool::Convert.new do |builder|
+        builder << @image
+        builder << "-sepia-tone 80%"
+        builder << @image
+      end
+
     end
 
 end
