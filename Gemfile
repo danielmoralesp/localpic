@@ -7,22 +7,23 @@ gem 'rails-api'
 
 gem 'spring', :group => :development
 
+gem 'listen'
 
-gem 'sqlite3'
+gem 'pg'
+gem 'activerecord-postgis-adapter'
 
+# Serializer for JSON
+gem 'active_model_serializers'
 
+gem 'refile', require: ['refile/rails', 'refile/image_processing']
+# To upload images to S3 with refile we need:
+gem 'aws-sdk'
+gem 'aws-sdk-v1' # Can be used together with v2 because of different namespaces.
+gem 'mini_magick', '~> 3.7.0'
 
-# To use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
+gem 'sidekiq'
 
-# To use Jbuilder templates for JSON
-# gem 'jbuilder'
+gem 'ohm'
+gem 'ohm-contrib'
 
-# Use unicorn as the app server
-# gem 'unicorn'
-
-# Deploy with Capistrano
-# gem 'capistrano', :group => :development
-
-# To use debugger
-# gem 'ruby-debug19', :require => 'ruby-debug'
+gem "rgeo-proj4"
