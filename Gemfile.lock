@@ -631,9 +631,6 @@ GEM
       bundler (>= 1.3.0)
       railties (= 5.1.4)
       sprockets-rails (>= 2.0.0)
-    rails-api (0.4.1)
-      actionpack (>= 3.2.11)
-      railties (>= 3.2.11)
     rails-dom-testing (2.0.3)
       activesupport (>= 4.2.0)
       nokogiri (>= 1.6)
@@ -703,7 +700,6 @@ DEPENDENCIES
   ohm-contrib
   pg
   rails (~> 5.1.4)
-  rails-api
   refile
   rgeo-proj4
   sidekiq
